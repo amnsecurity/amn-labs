@@ -1,0 +1,17 @@
+# Temporary & build artifacts
+build/
+dist/
+__pycache__/
+*.py[cod]
+*$py.class
+*.spec
+*.log
+
+# Local workspace packages & distributions
+[0-9]*/
+*.zip
+*.py
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
