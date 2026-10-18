@@ -9,7 +9,7 @@
 [![Exam Match](https://img.shields.io/badge/Exam%20Simulation-eJPTv2%20100%25%20Match-gold?style=for-the-badge&logo=securityscorecard&logoColor=black)](https://ine.com/certifications/ejpt)
 [![Platform](https://img.shields.io/badge/Engine-Windows%20%7C%20Kali%20Linux%20%7C%20macOS-141210?style=for-the-badge&logo=linux&logoColor=d4af37)](https://github.com/amnsecurity)
 [![Docker](https://img.shields.io/badge/Infrastructure-Docker%20%26%20Compose-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
-[![Integrity](https://img.shields.io/badge/Anti--Tamper-HMAC--SHA256%20Locked-4CAF50?style=for-the-badge&logo=checkmarx&logoColor=white)](https://amn.amnoffsec.workers.dev/)
+[![Version](https://img.shields.io/badge/Release-v1.0.0-4CAF50?style=for-the-badge&logo=github&logoColor=white)](https://github.com/amnsecurity/amn-labs/releases)
 
 ---
 
@@ -31,9 +31,9 @@
 
 ## 📌 نبذة عن المنصة | About The Platform
 
-منصة **AMN Security eJPTv2 Practice Range** هي بيئة تدريبية هجومية مستقلة بالكامل ومحمية بنظام **Anti-Tamper Cryptographic Lock**. 
+منصة **AMN Security eJPTv2 Practice Range** هي بيئة تدريبية هجومية عملية متكاملة. 
 
-تتميز المنصة بجمع كافة معامل الامتحان العملي (16 بيئة محاكاة واقعية) وأدلة الحلول التفاعلية الفاخرة داخل أداة تنفيذية موحدة `amn-labs.exe` مشفرة برمجياً، تتيح لك بضغطة زر واحدة تشغيل أي سيناريو امتحاني عبر حاويات Docker المعزولة تلقائياً، مع فتح دليل تفاعلي مفصل يشرح لك خطوات اجتياز السيناريو وتحصيل الأعلام خطوة بخطوة باللغتين العربية والإنجليزية.
+تتميز المنصة بجمع كافة معامل الامتحان العملي (16 بيئة محاكاة واقعية) وأدلة الحلول التفاعلية الفاخرة داخل أداة تنفيذية موحدة `amn-labs.exe`، تتيح لك بضغطة زر واحدة تشغيل أي سيناريو امتحاني عبر حاويات Docker المعزولة تلقائياً، مع فتح دليل تفاعلي مفصل يشرح لك خطوات اجتياز السيناريو وتحصيل الأعلام خطوة بخطوة باللغتين العربية والإنجليزية.
 
 ---
 
@@ -114,19 +114,11 @@ python3 amn_labs.py setup
 .\amn-labs.exe guide 1
 ```
 
-#### 7. التحقق من سلامة الأداة المشفرة وعدم التعديل عليها:
+#### 7. فحص واختبار سلامة الأداة (Self-Verification):
 ```bash
 .\amn-labs.exe verify
 ```
 
----
-
-## 🛡️ بنية الحماية المشفرة | Anti-Tamper Cryptographic Engine
-
-تم دمج وتشفير كافة مكونات المعامل الـ 16 داخل الملف الثنائي المترجم:
-1. **انعدام الأكواد المكشوفة (Zero Plaintext):** لا يحتوي المستودع على أي ملفات نصية أو أكواد HTML مكشوفة لضمان عدم سرقة أو تعديل الهوية من قبل أي طرف.
-2. **قفل المصادقة الرقمية (HMAC-SHA256 Integrity Lock):** يتم فحص بصمة التشفير الرقمية لكامل الحزمة قبل تنفيذ أي أمر؛ أي محاولة لتعديل البرنامج أو نصوص الحقوق عبر محررات الـ Hex تعطل تشغيل البرنامج فوراً.
-3. **بيئة تشغيل معزولة مؤقتة (Ephemeral Runtime):** يتم فك تشفير المعمل المطلوب فقط داخل مجلد مؤقت مشفر بالذاكرة أثناء الجلسة التدريبية، ويتم حذفه وتنظيفه كلياً عند الانتهاء.
 
 ---
 
