@@ -127,7 +127,7 @@ python3 amn_labs.py setup
 <div align="center">
 
 ### **المهندس أيمن محمود جاسم | Eng. Ayman Mahmoud Jasim**
-**مؤسس AMN Security للاستشارات والأمن الهجومي | Offensive Security Consultant**
+**AMN Security للاستشارات والأمن الهجومي | Offensive Security Consultant**
 
 <br/>
 
